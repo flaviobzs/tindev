@@ -5,7 +5,7 @@ import logo from '../../assets/logo.svg';
 
 import api from '../../services/api'
 
-export default function Login() {
+export default function Login({ history }) {
 
   const [username, setUsername] = useState('')
 
@@ -14,13 +14,13 @@ export default function Login() {
 
       console.log(username);
 
-      // const response = await api.post('/devs', {
-      //     username: username
-      // })
+      const response = await api.post('/devs', {
+          username: username
+      })
 
-      // const { _id } = response.data
+      const { _id } = response.data
 
-      // history.push(`/dev/${_id}`)
+      history.push(`/dev/${_id}`)
   }
 
   return (
