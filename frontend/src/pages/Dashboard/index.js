@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Dashboard() {
+function Main() {
   return (
     <h1>TESTE</h1>
   );
 }
 
-export default Dashboard;
+export default Main;
