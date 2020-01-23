@@ -20,10 +20,12 @@ export default createGlobalStyle`
 
   body{
     -webkit-font-smoothing: antialiased;
+    background: #f5f5f5;
+    padding: 20px;
   }
 
   body, input, button {
-    font: 14px 'Roboto', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   a {
