@@ -8,8 +8,7 @@ export default function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={Login} />
-      {/* <Route path="/dev/:id" component={Main} /> */}
-      <Route path="/dev" component={Main} />
+      <Route path="/dev/:id" component={Main} />
     </Switch>
   );
 }
