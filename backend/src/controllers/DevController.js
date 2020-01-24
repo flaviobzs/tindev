@@ -1,5 +1,6 @@
-import api from '../services/api';
 import Dev from '../schemas/Dev';
+
+import api from '../services/api';
 
 class DevController {
   async index(request, response) {
@@ -28,7 +29,7 @@ class DevController {
       return response.json(userExists); // verificar se o usuario já existe para não permitir um novo cadastro
     }
 
-    const githubResponse = await api.get(username); // buscar dados do usuario
+    const githubResponse = await api.get(`${username}`); // buscar dados do usuario
 
     const { name, bio, avatar_url: avatar } = githubResponse.data; // dados da resposta (avatar_url renomeado para avatar)
 
