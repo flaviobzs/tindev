@@ -2,19 +2,20 @@ import Dev from '../schemas/Dev';
 
 class LikeController {
   async store(request, response) {
-    const { devId } = request.params;
-    const { user } = request.headers; // dado do usuario logado
+    const { devId } = request.params; // TODO pegar dados dos parametros da requisição
+    const { user } = request.headers; // TODO pegar dados do cabeçalho da requisição
 
-    const loggedDev = await Dev.findById(user);
-    const targetDev = await Dev.findById(devId);
+    const loggedDev = await Dev.findById(user); // TODO buscar dev logado
+    const targetDev = await Dev.findById(devId); // TODO buscar dev alvo
 
+    //TODO verificar se o dev alvo existe
     if (!targetDev) {
       return response.status(400).json({ error: 'Dev not exists' });
     }
 
-    loggedDev.likes.push(targetDev._id); // adicionar o usuario logado no campo de liked do usuario da busca
+    loggedDev.likes.push(targetDev._id); //TODO adicionar o id do dev alvo no campo de likes do dev logado
 
-    await loggedDev.save();
+    await loggedDev.save(); //TODO salvar informação adicionada
 
     // if (targetDev.likes.includes(loggedDev._id)) { //verificar se houve match entre usuarios
 
@@ -30,7 +31,7 @@ class LikeController {
     //   }
     // }
 
-    return response.json(loggedDev);
+    return response.json(loggedDev); //TODO retornar o dev logado
   }
 }
 

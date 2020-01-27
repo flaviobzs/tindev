@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import io from 'socket.io-client';
 
 import logo from '../../assets/logo.svg';
 import like from '../../assets/like.svg';

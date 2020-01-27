@@ -5,7 +5,7 @@ const DevSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
+      // required: true,
     },
     user: {
       type: String,

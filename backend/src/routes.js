@@ -1,8 +1,8 @@
 import { Router } from 'express';
 
-import DevController from './controllers/DevController';
-import LikeController from './controllers/LikeController';
-import DeslikeController from './controllers/DeslikeController';
+import DevController from './app/controllers/DevController';
+import LikeController from './app/controllers/LikeController';
+import DeslikeController from './app/controllers/DeslikeController';
 
 const routes = Router();
 
